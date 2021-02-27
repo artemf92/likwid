@@ -1,0 +1,144 @@
+@mixin transition {
+  transition: .3s ease-in-out;
+}
+.page-contact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  h3 {
+    margin-bottom: 40px;
+  }
+  @media (min-width: 992px) {
+    margin-bottom: 120px;
+    margin-top: 65px;
+  }
+  &__text {
+    width: 100%;
+    max-width: 450px;
+
+    @media (min-width: 1200px) {
+      max-width: 545px;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 58px;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #F28B41;
+      margin-bottom: 6px;
+    }
+    p {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: left;
+      color: #979797;
+      padding: 0;
+      margin: 0 0 40px;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__image {
+    width: 100%;
+    max-width: 511px;
+    height: 495px;
+
+    background: #1B1B1B;
+    border-radius: 16px;
+    margin: 0 auto;
+    @media (min-width: 992px) {
+      margin: 35px 0 0 auto;
+    }
+  }
+}
+
+section.map {
+  height: 500px;
+  position: relative;
+  background: #252525;
+  .contact__card {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    transform: translateY(-47%);
+    z-index: 10;
+    @media (min-width: 768px) {
+      padding: 32px;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-size: 16px;
+      line-height: 20px;
+      display: block;
+      text-decoration: none;
+      @include transition;
+      &:hover {
+        color: darken(#fff, 15%);
+      }
+    }
+    .tel {
+      margin-bottom: 14px;
+    }
+    p {
+      padding: 0;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: left;
+      font-size: 16px;
+      color: #979797;
+      margin: 30px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid #262C35;
+    }
+    &--wrapper {
+      height: 100%;
+      padding: 0 5px;
+      @media (min-width: 992px) {
+        padding: 0;
+      }
+
+      .container {
+        position: relative;
+        height: 100%;
+      }
+    }
+
+    overflow: hidden;
+    border-radius: 10px;
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 500px;
+      background: rgba(27, 27, 27, 0.6);
+      backdrop-filter: blur(1px);
+      z-index: -1;
+    }
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1) contrast(.8) invert(1) opacity(0.5) brightness(1.5);
+    -webkit-filter: grayscale(1) contrast(.8) invert(1) opacity(0.5) brightness(1.5);
+    z-index: 1;
+  }
+}

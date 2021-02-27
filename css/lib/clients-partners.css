@@ -1,0 +1,18 @@
+.block__middle {
+  padding: 160px 0;
+  color: #fff;
+}
+.block__middle .our {
+  padding: 255px 0;
+}
+.block__middle .our__clients {
+  width: 464px;
+  height: 97px;
+  vertical-align: bottom;
+}
+.block__middle .our__partners {
+  width: 427px;
+  height: 115px;
+}
+
+/*# sourceMappingURL=clients-partners.css.map */

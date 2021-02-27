@@ -1,0 +1,249 @@
+//@import "../style";
+@mixin transition {
+  transition: .3s ease-in-out;
+}
+.third {
+  &__block {
+    background-color: #fff;
+    color: #262c35;
+    padding: 20px 0;
+    overflow: hidden;
+    @media (min-width: 768px) {
+      padding: 80px 0 40px;
+    }
+    &--title {
+      //width: 354px;
+      height: 68px;
+      color: #262c35;
+      font-size: 36px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+      margin: 2px auto 10px;
+
+      @media (min-width: 768px) {
+        font-size: 49px;
+        transform: translateX(-18px);
+      }
+    }
+    &--wrapper {
+      overflow: hidden;
+      height: 558px;
+      width: 100vw;
+      @media (min-width: 1200px) {
+        width: auto;
+      }
+    }
+    &--inner {
+      transform: rotate(-90deg) translateY(0%) translateX(-100%);
+      transform-origin: left top;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 400vw;
+      width: 558px;
+
+      scroll-snap-type: y mandatory;
+      @media (min-width: 375px) {
+        height: 495vw;
+      }
+      @media (min-width: 1200px) {
+        transform: rotate(-90deg) translateY(-106%) translateX(14%);
+        transform-origin: right top;
+        width: auto;
+      }
+    }
+    &--item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+      max-width: 1158px;
+      margin: 0 auto;
+      height: 513px;
+      transform: rotate(90deg);
+      transform-origin: right top;
+      flex-direction: column;
+
+      scroll-snap-align: start;
+
+      @media (min-width: 1200px) {
+        height: 558px;
+        width: 100%;
+        flex-direction: row;
+      }
+
+      @for $i from 1 through 4 {
+      &[data-step='#{$i}'] {
+        background-image: url('../img/bg-step#{$i}.svg');
+        background-repeat: no-repeat;
+        @if $i == 1 {
+          background-size: 100%;
+          @media (min-width: 1200px) {
+            background-size: 473px;
+          }
+        } @else if $i == 2 {
+          background-size: 100%;
+          @media (min-width: 1200px) {
+            background-size: 319px 322px;
+          }
+        } @else if $i == 3 {
+          background-size: 100%;
+          @media (min-width: 1200px) {
+            background-size: 289px;
+          }
+        } @else {
+          background-size: 100%;
+          @media (min-width: 1200px) {
+            background-size: 406px;
+          }
+        }
+        background-position: 45% 48%;
+        .third__block--item-step {
+          background-image: url('../img/bgdesc#{$i}.svg');
+          background-repeat: no-repeat;
+          @if $i == 1 {
+            background-size: 148px;
+          } @else if $i == 2 {
+            background-size: 134px;
+          } @else if $i == 3 {
+            background-size: 188px;
+          }
+          background-position: 50%;
+           span {
+             color: #262c35;
+             font-size: 34px;
+             font-weight: 800;
+             font-style: normal;
+             letter-spacing: normal;
+             line-height: 44px;
+             text-align: center;
+             width: 113px;
+             height: 52px;
+             border-radius: 4px;
+             background-color: rgba(255, 255, 255, 0.4);
+           }
+        }
+      }
+    }
+      &[data-step='1'] {
+        transform: rotate(90deg) translateX(100%) translateY(-100px);
+        @media (min-width: 375px) {
+          transform: rotate(90deg) translateX(100%) translateY(-100px);
+        }
+        @media (min-width: 1200px) {
+          transform: rotate(90deg) translateX(100%);
+        }
+    }
+      &[data-step='2'] {
+        transform: rotate(90deg) translateX(50%) translateY(-100px);
+        @media (min-width: 375px) {
+          transform: rotate(90deg) translateX(65%) translateY(-100px);
+        }
+        @media (min-width: 1200px) {
+          transform: rotate(90deg) translateX(200%);
+        }
+    }
+      &[data-step='3'] {
+        transform: rotate(90deg) translateX(5%) translateY(-100px);
+        @media (min-width: 375px) {
+          transform: rotate(90deg) translateX(30%) translateY(-100px);
+        }
+        @media (min-width: 1200px) {
+          transform: rotate(90deg) translateX(300%);
+        }
+    }
+      &[data-step='4'] {
+        transform: rotate(90deg) translateX(19%) translateY(-100px);
+        @media (min-width: 1200px) {
+          transform: rotate(90deg) translateX(400%);
+        }
+      }
+        &[data-step='5'] {
+          transform: rotate(90deg) translateX(19%) translateY(-100px);
+          @media (min-width: 1200px) {
+            display: none;
+          }
+    }
+      &-description {
+        width: 260px;
+        height: 295px;
+        mix-blend-mode: hard-light;
+        .step__title {
+          width: 260px;
+          height: 91px;
+          opacity: 0.2;
+          color: #262c35;
+          font-size: 56px;
+          font-weight: 600;
+          font-style: normal;
+          //letter-spacing: normal;
+          line-height: 90px;
+          text-align: left;
+          margin: 0;
+          letter-spacing: 10px;
+          padding-left: 5px;
+          @media (min-width:768px) {
+            font-size: 72px;
+            margin: 0 0 9px;
+          }
+        }
+        .step__description {
+          width: 260px;
+          height: 89px;
+          color: #262c35;
+          font-size: 26px;
+          font-weight: 800;
+          font-style: normal;
+          letter-spacing: -2px;
+          line-height: 44px;
+          text-align: left;
+          margin: 0 0 143px;
+          @media (min-width:768px) {
+            font-size: 34px;
+            margin: 0 0 50px;
+          }
+        }
+        a {
+          color: #262c35;
+          text-decoration: none;
+          @include transition;
+          &:hover {
+            background-color: #f28b41;
+          }
+        }
+      }
+      &-step {
+        width: 148px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -3px;
+        align-self: flex-end;
+        @media (min-width: 1200px) {
+          margin-right: 55px;
+          align-self: initial;
+        }
+        span {
+          color: #262c35;
+          font-size: 34px;
+          font-weight: 800;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 44px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.fake[data-step='6'] {
+  display: none;
+
+  @media (min-width: 375px) {
+    display: block;
+  }
+}

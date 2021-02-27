@@ -1,0 +1,151 @@
+.tarifs {
+  margin-bottom: 20px;
+  @media (min-width: 992px) {
+    margin-bottom: 120px;
+  }
+  &__title.section__title {
+    letter-spacing: 3px;
+    @media (min-width: 992px) {
+      margin-bottom: 82px;
+    }
+  }
+  .row {
+    height: 445px;
+    width: 253px;
+    margin: 0 auto;
+
+    @media (min-width: 1080px) {
+      //height: auto;
+      width: auto;
+    }
+  }
+  &__item {
+    //flex: 0 0 25%;
+    width: 253px;
+    border-radius: 12px;
+    background-color: #101010;
+    margin: 0 10px 0 40px;
+    padding: 40px 40px 45px;
+    position: relative;
+
+    &:not(:last-of-type) {
+      @media (min-width: 1080px) {
+        margin: 0 40px 0 0;
+      }
+    }
+    &:last-of-type {
+      @media (min-width: 992px) {
+        margin: 0;
+      }
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-of-type(#{$i}) .tarifs__text {
+        background-image: url(../img/tarif#{$i}.svg);
+      }
+    }
+    &--blue h4 {
+      color: #1294dd;
+    }
+    &--green h4 {
+      color: #38a254;
+    }
+    &--yellow h4 {
+      color: #f2b132;
+    }
+    &--orange h4 {
+      color: #f28b41;
+    }
+    &--blue a {
+      background-color: #1294dd;
+    }
+    &--green a {
+      background-color: #38a254;
+    }
+    &--yellow a {
+      background-color: #f2b132;
+    }
+    &--orange a {
+      background-color: #f28b41;
+    }
+    &--green li.checked {
+      filter: hue-rotate(290deg);
+    }
+    &--yellow li.checked {
+      filter: hue-rotate(200deg);
+    }
+    &--orange li.checked {
+      filter: hue-rotate(190deg);
+    }
+  }
+  &__text {
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: left top;
+    padding-left: 60px;
+    margin-bottom: 46px;
+
+    h4 {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 2.24px;
+      line-height: 20px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0;
+      margin: 0;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 20px;
+      text-align: left;
+    }
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 20px;
+      text-align: left;
+      padding-left: 28px;
+      color: #979797;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left top;
+      background-image: url(../img/nocheck.svg);
+      margin-bottom: 20px;
+      &.checked {
+        color: #ffffff;
+        background-image: url(../img/checked.svg);
+      }
+    }
+  }
+  &__link {
+    display: block;
+    margin: 0 auto;
+    width: 61px;
+    height: 60px;
+    background-color: #1294dd;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 19px 16px;
+    background-position: 50%;
+    background-image: url(../img/link-arrow.svg);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -30px;
+  }
+}

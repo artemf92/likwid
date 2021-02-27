@@ -1,0 +1,96 @@
+.block {
+  &__mails {
+    padding: 15px 0 30px;
+    background-color: #fff;
+    color: #262c35;
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      height: 772px;
+      padding: 120px 0 0;
+    }
+    &:before,
+    &:after{
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 100%;
+      z-index: 100;
+      background: rgb(252,251,251);
+      background: -moz-linear-gradient(90deg, rgba(252,251,251,1) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(90deg, rgba(252,251,251,1) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(90deg, rgba(252,251,251,1) 0%, rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfbfb",endColorstr="#ffffff",GradientType=1);
+
+      @media (min-width: 768px) {
+        width: 200px;
+      }
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+      transform: rotate(180deg);
+    }
+    &--title {
+      color: #262c35;
+      font-size: 36px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+      //margin: 0 0 80px -30px;
+      @media (min-width: 768px) {
+        font-size: 52px;
+        margin: 0 0 80px -30px;
+      }
+    }
+    &--item {
+      margin: 0 10px;
+      width: 180px;
+      height: 258px;
+      display: inline-block;
+      img {
+        width: 180px;
+        height: 258px;
+      }
+      @media (min-width: 768px) {
+        width: 260px;
+        height: 374px;
+
+        img {
+          width: 260px;
+          height: 374px;
+        }
+      }
+    }
+    &--layout {
+      position: relative;
+    }
+  }
+}
+
+.arrow {
+  width: 240px;
+  height: 500px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  z-index: 1000;
+  &-right {
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+  }
+  &-left {
+    background-image: url(../img/arrleft.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+  }
+}

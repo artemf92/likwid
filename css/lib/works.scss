@@ -1,0 +1,242 @@
+@mixin transition {
+  transition: .3s ease-in-out;
+}
+.block {
+  &__how-works {
+    background-color: #fff;
+    color: #262c35;
+    padding: 80px 0 40px;
+    overflow: hidden;
+    position: relative;
+    &--title {
+      height: 68px;
+      color: #262c35;
+      font-size: 36px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+      margin: 2px auto 10px;
+
+      @media (min-width: 768px) {
+        font-size: 49px;
+        transform: translateX(-18px);
+      }
+    }
+    &--wrapper {
+      overflow: hidden;
+      height: 558px;
+      width: 100vw;
+    }
+    &--item-inner {
+      width: 100vw;
+    }
+    &--item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 513px;
+      width: 100%;
+      max-width: 1158px;
+      margin: 0 auto;
+      flex-direction: column;
+
+      a.btn {
+        text-decoration: none;
+        @include transition;
+        &:hover {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+      @media (min-width: 768px) {
+        flex-direction: row;
+        max-width: 768px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 558px;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1158px;
+      }
+
+      @for $i from 1 through 4 {
+        &[data-step='#{$i}'] {
+          background-image: url('../img/bg-step#{$i}.svg');
+          background-repeat: no-repeat;
+          @if $i == 1 {
+            background-size: 100%;
+            @media (min-width: 768px) {
+              background-size: 473px;
+            }
+          } @else if $i == 2 {
+              background-size: 319px 322px;
+          } @else if $i == 3 {
+              background-size: 289px;
+          } @else {
+            background-size: 100%;
+            @media (min-width: 768px) {
+              background-size: 406px;
+            }
+          }
+          background-position: 50%;
+
+          @media (min-width: 1200px) {
+            background-position: 45% 48%;
+          }
+          .block__how-works--item-step {
+            background-image: url('../img/bgdesc#{$i}.svg');
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: contain;
+            //@if $i == 1 {
+            //  background-size: 148px;
+            //} @else if $i == 2 {
+            //  background-size: 134px;
+            //} @else if $i == 3 {
+            //  background-size: 188px;
+            //}
+            background-position: 50%;
+            span {
+              color: #262c35;
+              font-size: 34px;
+              font-weight: 800;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: 44px;
+              text-align: center;
+              width: 113px;
+              height: 52px;
+              border-radius: 4px;
+              background-color: rgba(255, 255, 255, 0.4);
+            }
+
+          }
+        }
+      }
+      &[data-step='1'] {
+        @media (min-width: 375px) {
+        }
+        @media (min-width: 1200px) {
+        }
+      }
+      &[data-step='2'] {
+        @media (min-width: 375px) {
+        }
+        @media (min-width: 1200px) {
+        }
+      }
+      &[data-step='3'] {
+        @media (min-width: 375px) {
+        }
+        @media (min-width: 1200px) {
+        }
+      }
+      &[data-step='4'] {
+
+        .btn__orange:hover {
+          color: #f28b41;
+        }
+        @media (min-width: 1200px) {
+        }
+      }
+      &-description {
+        width: 260px;
+        height: 295px;
+        //mix-blend-mode: hard-light;
+        .step__title {
+          width: 260px;
+          height: 91px;
+          opacity: 0.2;
+          color: #262c35;
+          font-size: 56px;
+          font-weight: 600;
+          font-style: normal;
+          //letter-spacing: normal;
+          line-height: 90px;
+          text-align: left;
+          margin: 0;
+          letter-spacing: 10px;
+          padding-left: 5px;
+          @media (min-width:768px) {
+            font-size: 72px;
+            margin: 0 0 9px;
+          }
+        }
+        .step__description {
+          width: 260px;
+          height: 89px;
+          color: #262c35;
+          font-size: 26px;
+          font-weight: 800;
+          font-style: normal;
+          letter-spacing: -2px;
+          line-height: 44px;
+          text-align: left;
+          margin: 0 0 143px;
+          @media (min-width:768px) {
+            font-size: 34px;
+            margin: 0 0 50px;
+          }
+        }
+        a {
+          color: #262c35;
+          text-decoration: none;
+          @include transition;
+          &:hover {
+            background-color: #f28b41;
+          }
+        }
+      }
+      &-step {
+        width: 148px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -3px;
+        align-self: flex-end;
+        @media (min-width: 768px) {
+          align-self: initial;
+          margin-right: 55px;
+        }
+        @media (min-width: 1200px) {
+          margin-right: 55px;
+          align-self: initial;
+        }
+        span {
+          color: #262c35;
+          font-size: 34px;
+          font-weight: 800;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: 44px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+span.arrow-slide-next {
+  position: absolute;
+  top: 55%;
+  right: 14%;
+  background-image: url(../img/arrowslide.svg);
+  width: 26px;
+  height: 47px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  cursor: pointer;
+  display: none!important;
+  @media (min-width: 768px) {
+    display: block!important;
+    right: 5%;
+  }
+  @media (min-width: 1200px) {
+    right: 14%;
+  }
+}

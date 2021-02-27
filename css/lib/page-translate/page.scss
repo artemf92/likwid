@@ -1,0 +1,38 @@
+.page__translate {
+  .sites__process {
+    @media (min-width: 1080px) {
+      margin-bottom: 120px;
+    }
+  }
+  .sblock__main-contact {
+    padding: 90px 0 82px;
+  }
+  .section__title {
+    @media (min-width: 1080px) {
+      padding-left: 50px;
+      margin-top: 54px;
+      letter-spacing: 2px;
+    }
+  }
+  .container {
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h2 {
+      @media (min-width: 992px) {
+        max-width: 400px;
+      }
+    }
+  }
+  .block__main-contact-in {
+    @media (min-width: 992px) {
+      margin: 0;
+      max-width: 559px;
+    }
+    .input-field {
+      width: 239px;
+    }
+  }
+}

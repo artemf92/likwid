@@ -1,0 +1,186 @@
+.block {
+  &__middle {
+    padding: 40px 0 32px;
+    color: #fff;
+    .our {
+      padding: 255px 0;
+      &__clients {
+        //width: 464px;
+        width: 290px;
+        height: 75px;
+        vertical-align: bottom;
+        margin-left: 10%;
+        margin-right: auto;
+        background-image: url('../img/ar-bottom2.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 68px 62px;
+        background-size: 68px 62px;
+        background-position: 75% 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        //@media (min-width: 480px) {
+        //  margin-left: 21.5%;
+        //}
+        @media (min-width: 768px) {
+          width: 464px;
+          height: 110px;
+          -webkit-background-size: 110px 84px;
+          background-size: 110px 84px;
+          //background-position: 100% 0;
+          background-position: 83% bottom;
+        }
+        &._active:after {
+          animation: showBottom 1s ease-out forwards;
+        }
+        &:after {
+          display: block;
+          content: '';
+          background-color: #090200;
+          width: 126px;
+          height: 100px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          @media (min-width: 768px) {
+            height: 115px;
+            width: 180px;
+          }
+        }
+      }
+      &__partners {
+        width: 234px;
+        height: 75px;
+        text-align: right;
+        margin: 0 0 0 23%;
+        background-image: url('../img/ar-bottom.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 68px 63px;
+        background-size: 68px 63px;
+        background-position: 0 75%;
+        position: relative;
+        @media (min-width: 480px) {
+          margin: 0 0 0 43%;
+        }
+
+        @media (min-width: 768px) {
+          width: 427px;
+          height: 115px;
+          -webkit-background-size: 110px 84px;
+          background-size: 110px 84px;
+          background-position: 0 100%;
+          transform: translateY(-7px);
+          margin: 0 0 0 43%;
+        }
+        &._active:after {
+          animation: showBottom 1s ease-out forwards;
+        }
+        &:after {
+          display: block;
+          content: '';
+          background-color: #090200;
+          width: 68px;
+          height: 80px;
+          position: absolute;
+          top: 7px;
+          left: 0;
+          transform: rotate(180deg);
+          @media (min-width: 768px) {
+            width: 115px;
+            height: 100px;
+            top: 15px;
+          }
+        }
+      }
+      &__clients,
+      &__partners {
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        @media (min-width: 768px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  &__our--clients-partners {
+    padding: 15px 0 24px;
+    overflow: hidden;
+    background-color: #090200;
+    @media (min-width: 992px) {
+      padding: 80px 0 136px;
+    }
+    &.main,
+    &.leads__page{
+      background-color: #020202;
+      .our__clients:after,
+      .our__partners:after {
+        background-color: #020202;
+      }
+    }
+  }
+  &__our{
+    &--clients {
+      &-item {
+        width: 180px;
+        height: 180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        margin-left: -45px;
+        background-size: auto;
+        background-position: center;
+        //&:nth-of-type(2n) {
+        //  margin-top: -16px;
+        //}
+        @for $i from 1 through 7 {
+          &-#{$i} {
+            background-image: url(../img/clients/cl#{$i}-2.svg);
+          }
+        }
+        @media (min-width: 992px) {
+          width: 320px;
+          height: 180px;
+        }
+      }
+    }
+    &--partners {
+      &-item {
+        width: 180px;
+        height: 180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        margin-left: -45px;
+        background-size: auto;
+        background-position: center;
+        @media (min-width: 992px) {
+          width: 320px;
+          height: 180px;
+        }
+        //&:nth-of-type(2n) {
+        //  margin-top: -16px;
+        //}
+        @for $j from 1 through 7 {
+          &-#{$j} {
+            background-image: url(../img/clients/parter#{$j}2.svg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showTop {
+  100% {
+    height: 0;
+  }
+}@keyframes showBottom {
+  100% {
+    width: 0;
+  }
+}

@@ -1,0 +1,84 @@
+.translate {
+  &__blocks {
+    margin-bottom: 20px;
+    @media (min-width: 992px) {
+      margin-bottom: 120px;
+    }
+  }
+  &__hero {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      &.leads__hero {
+        padding: 35px 0;
+      }
+    }
+    &--container {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right top;
+      @media (min-width: 768px) {
+        padding-top: 30px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    row-gap: 40px;
+    li {
+      flex: 0 0 33.3333%;
+      max-width: 320px;
+      display: flex;
+      @media (min-width: 768px) {
+        max-width: 360px;
+      }
+    }
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+    }
+    @media (min-width: 1080px) {
+      justify-content: space-between;
+    }
+  }
+  &__icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1b1b1b;
+    margin-right: 24px;
+  }
+  &__text {
+    width: calc(100% - 80px - 24px);
+    h4 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 8px;
+      // Style for "Цена"
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: normal;
+      text-align: left;
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    p {
+      max-width: 248px;
+      margin: 0;
+      padding: 0;
+      color: #979797;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 20px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.sites__examples {
+  margin-bottom: 35px;
+  background-color: #020202;
+  overflow: hidden;
+  @media (min-width: 992px) {
+    margin-bottom: 135px;
+  }
+  &--title {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3.5px;
+    line-height: 48px;
+    text-align: left;
+    z-index: 10;
+    transform: translateY(-30px);
+    position: absolute;
+    @media (min-width: 480px) {
+      font-size: 40px;
+    }
+    @media (min-width: 768px) {
+      font-size: 88px;
+      line-height: 88px;
+    }
+  }
+  &--slider {
+    display: flex;
+    .slick-slide {
+      z-index: 1;
+    }
+    .slick-center {
+      z-index: 1000!important;
+    }
+    &-item {
+      width: 100%;
+      max-width: 360px;
+      height: 540px;
+      margin: 0 20px;
+    }
+    &-image {
+      width: 100%;
+      max-width: 360px;
+      height: 480px;
+      border-radius: 16px;
+      background-color: #161616;
+      margin: 0 0 24px;
+    }
+    &-title {
+      margin: 0;
+      padding: 0;
+      color: #634137;
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: center;
+    }
+  }
+}

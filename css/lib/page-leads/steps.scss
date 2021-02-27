@@ -1,0 +1,107 @@
+.leads__steps {
+  &--container {
+
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      margin-bottom: 137px;
+
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 22px;
+
+      @media (min-width: 992px) {
+        margin-bottom: 144px;
+      }
+    }
+  }
+  &--picture {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: space-between;
+    margin: 0 auto 50px;
+    @media (min-width: 992px) {
+      margin: 0;
+    }
+    img {
+      width: 100%;
+    }
+    .social-icon {
+      width: 80px;
+      height: 80px;
+      flex: 0 0 18%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (min-width: 992px) {
+        flex: 0 0 20%;
+      }
+
+      @for $i from 1 to 21 {
+        &:nth-of-type(#{$i}) {
+          background-image: url(../img/socials/icon#{$i}.svg);
+        }
+      }
+      &:nth-of-type(6) {
+        background-image: url(../img/socials/icon6.png);
+      }
+      &:nth-of-type(19) {
+        background-image: url(../img/socials/icon19.png);
+      }
+      &:nth-of-type(5n) {
+        flex: 0 0 18%;
+        @media (min-width: 992px) {
+          flex: 0 0 15%;
+        }
+      }
+    }
+  }
+  &--desc {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    h3 {
+      padding: 0;
+      color: #ffffff;
+      width: 100%;
+      max-width: 360px;
+      font-size: 38px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 58px;
+      text-align: center;
+      margin: 0 0 26px;
+    }
+    p {
+      margin: 0;
+      width: 100%;
+      max-width: 360px;
+      color: #979797;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+}
+
+

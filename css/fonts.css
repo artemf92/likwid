@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap");
+@font-face {
+  font-family: "Basier Circle";
+  src: url("../webfonts/BasierCircle-Regular.eot");
+  src: local("../webfonts/Basier Circle Regular"), local("BasierCircle-Regular"), url("../webfonts/BasierCircle-Regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/BasierCircle-Regular.woff2") format("woff2"), url("../webfonts/BasierCircle-Regular.woff") format("woff"), url("../webfonts/BasierCircle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Basier Circle";
+  src: url("../webfonts/BasierCircle-Medium.eot");
+  src: local("../webfonts/Basier Circle Medium"), local("BasierCircle-Medium"), url("../webfonts/BasierCircle-Medium.eot?#iefix") format("embedded-opentype"), url("../webfonts/BasierCircle-Medium.woff2") format("woff2"), url("../webfonts/BasierCircle-Medium.woff") format("woff"), url("../webfonts/BasierCircle-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=fonts.css.map */

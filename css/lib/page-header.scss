@@ -1,0 +1,86 @@
+.page__header {
+  &--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 138px;
+
+    .header__top {
+      display: none;
+      @media (min-width: 992px) {
+        display: flex;
+      }
+    }
+  }
+
+  .logo {
+    background-image: url(../img/likwid.svg);
+    width: 174px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    margin-right: 64px;
+  }
+  &--nav {
+    flex-grow: 2;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 396px;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          color: #979797;
+          font-family: 'Basier Circle';
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: left;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .language {
+    flex-grow: 1;
+    color: #979797;
+    font-family: 'Basier Circle';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 96px;
+    display: none;
+    //@media (min-width: 520px) {
+    //  display: block;
+    //  padding-left: 0;
+    //}
+    @media (min-width: 768px) {
+      padding-left: 260px;
+      display: block;
+    }
+    figure {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+}
+
+
